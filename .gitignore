@@ -8,3 +8,4 @@ __pycache__/
 # files
 *.pyc
 *.DS_Store
+*.spec
