@@ -17,7 +17,10 @@ HEIGHT = 200
 
 
 models = {
-          'Bot 1' : 'willbot.mp4',
+
+          'Sandra' : 'sandrabot.mp4',
+          'Darius' : 'dariusbot.mp4',
+          'Will' : 'willbot.mp4',
           'Deepfake' : 'willfake.mp4',
           # 'Custom...' : None,
          }
@@ -36,11 +39,11 @@ dimensions_keys = list(dimensions.keys())
 
 cache = {
          'dims' : (3840, 2160),
-         'model_path' : 'willbot.mp4',
+         'model_path' : 'sandrabot.mp4',
          'clicked_flag' : False,
          'custom_flag' : False,
          'check' : False,
-         'model_name' : 'Male bot',
+         'model_name' : 'Sandra',
          'screen_size' : False,
         }
 
@@ -154,8 +157,8 @@ label = tk.Label(topframe, text='Settings').pack()
 # selection labels
 root.grid_columnconfigure(0, weight=1)
 root.grid_rowconfigure(0, weight=1)
-res_label = tk.Label(leftframe, text="Resolution:").grid(row=0, column=0)
-model_label = tk.Label(leftframe, text="Model:").grid(row=1, column=0)
+res_label = tk.Label(leftframe, text="Resolution:").grid(row=1, column=0)
+model_label = tk.Label(leftframe, text="Model:").grid(row=0, column=0)
 check_label = tk.Label(leftframe, text="Fit to screen?").grid(row=2, column=0)
 
 # variable to save dropdown results
@@ -166,9 +169,9 @@ model_clicked.set(models_keys[0])
 
 # drop down menus
 res_drop = tk.OptionMenu(leftframe, res_clicked, *dimensions_keys, command=selected_res)
-res_drop.grid(row=0, column=1, sticky='w')
+res_drop.grid(row=1, column=1, sticky='w')
 model_drop = tk.OptionMenu(leftframe, model_clicked, *models_keys, command=selected_model)
-model_drop.grid(row=1, column=1, sticky='w')
+model_drop.grid(row=0, column=1, sticky='w')
 
 # checkbox
 checkvar = tk.IntVar()

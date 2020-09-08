@@ -17,9 +17,9 @@ def main():
     FILENAME = reader.gui.resource_path('reader/data/' + REL_PATH)
     WINDOW_NAME = 'iDmission FaceBot'
 
-    if custom_flag:
-        print('Custom input coming soon, please select one of the premade models.')
-        return
+    # if custom_flag:
+    #     print('Custom input coming soon, please select one of the premade models.')
+    #     return
 
     if clicked_flag:
         reader.animator.main(FILENAME, WINDOW_SIZE, WINDOW_NAME, SCREEN_SIZE)

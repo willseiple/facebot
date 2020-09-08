@@ -1,5 +1,4 @@
 from cv2 import VideoCapture, namedWindow, destroyAllWindows, imshow, waitKey, resize, cvtColor, COLOR_BGR2GRAY
-from cv2 import *
 from threading import Thread
 import sys
 import numpy as np
@@ -9,8 +8,8 @@ import time
 # set binds and frame locations
 blink = (55, 20)
 smile = (140, 110)
-right = (288, 240)
-left =  (585, 240)
+right = (288, 255)
+left =  (585, 255)
 idle =  (880, 600)
 
 binds = {'b' : blink,
