@@ -1,6 +1,6 @@
 import tkinter as tk
-from PIL import ImageTk, Image
 from tkinter import filedialog
+from PIL import ImageTk, Image
 import sys
 from os import path, getcwd
 
@@ -17,7 +17,6 @@ HEIGHT = 200
 
 
 models = {
-
           'Sandra' : 'sandrabot.mp4',
           'Darius' : 'dariusbot.mp4',
           'Will' : 'willbot.mp4',
@@ -28,7 +27,8 @@ models = {
 models_keys = list(models.keys())
 
 dimensions = {
-              '4k' : (3840, 2160),
+              # causes frame drop 
+              # '4k' : (3840, 2160),
               '1440p' : (2560, 1440),
               '1080p' : (1920, 1080),
               '720p' : (1280, 720),
@@ -38,7 +38,7 @@ dimensions = {
 dimensions_keys = list(dimensions.keys())
 
 cache = {
-         'dims' : (3840, 2160),
+         'dims' : dimensions['1440p'],
          'model_path' : 'sandrabot.mp4',
          'clicked_flag' : False,
          'custom_flag' : False,
@@ -152,7 +152,8 @@ rightframe = tk.Frame(root)
 rightframe.pack(side='right', fill='y', pady=5)
 
 # header
-label = tk.Label(topframe, text='Settings').pack()
+label = tk.Label(topframe, text='Settings')
+label.pack()
 
 # selection labels
 root.grid_columnconfigure(0, weight=1)

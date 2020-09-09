@@ -1,8 +1,5 @@
 from cv2 import VideoCapture, namedWindow, destroyAllWindows, imshow, waitKey, resize, cvtColor, COLOR_BGR2GRAY
-from threading import Thread
 import sys
-import numpy as np
-import time
 
 
 # set binds and frame locations
