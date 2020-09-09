@@ -1,4 +1,4 @@
-# facebot
+# facebot Mac
 
 Requires Python 3
 
