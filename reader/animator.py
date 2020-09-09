@@ -7,7 +7,7 @@ blink = (55, 20)
 smile = (140, 110)
 right = (288, 255)
 left =  (585, 255)
-idle =  (880, 600)
+idle =  (880, 620)
 
 binds = {'b' : blink,
          's' : smile,
