@@ -1,6 +1,8 @@
 # facebot Mac
 
-Requires Python 3
+Requires Python 3, pip installer
+
+--------------------------------------------------------------------------------
 
 Clone repository and run the following scripts after navigating to its directory in terminal:
 
@@ -16,6 +18,6 @@ or if you are using ZSH:
 
 `$ facebot.sh`
 
---------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 Animations are smoothest at 1080p and below, dependent on hardware
