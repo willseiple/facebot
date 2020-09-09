@@ -12,8 +12,10 @@ To run the application:
 
 `$ bash facebot.sh`
 
-or
+or if you are using ZSH:
 
 `$ facebot.sh`
 
-if using ZSH
+--------------------------------------------------------------------------------------------
+
+Animations are smoothest at 1080p and below, dependent on hardware
