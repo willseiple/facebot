@@ -10,4 +10,10 @@ Clone repository and run the following scripts after navigating to its directory
 
 To run the application:
 
+`$ bash facebot.sh`
+
+or
+
 `$ facebot.sh`
+
+if using ZSH
