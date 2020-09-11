@@ -1,8 +1,5 @@
 import tkinter as tk
-from tkinter import filedialog
 from PIL import ImageTk, Image
-import sys
-from os import path, getcwd
 
 
 WIDTH = 400
@@ -28,7 +25,7 @@ models_keys = list(models.keys())
 
 dimensions = {
               # causes frame drop 
-              # '4k' : (3840, 2160),
+              '4k' : (3840, 2160),
               '1440p' : (2560, 1440),
               '1080p' : (1920, 1080),
               '720p' : (1280, 720),
@@ -48,11 +45,11 @@ cache = {
         }
 
 
-def resource_path(relative_path):
-    """ Get absolute path to resource, works for dev and for PyInstaller """
-        # PyInstaller creates a temp folder and stores path in _MEIPASS
-    base_path = getattr(sys, '_MEIPASS', getcwd())
-    return path.join(base_path, relative_path)
+# def resource_path(relative_path):
+#     """ Get absolute path to resource, works for dev and for PyInstaller """
+#         # PyInstaller creates a temp folder and stores path in _MEIPASS
+#     base_path = getattr(sys, '_MEIPASS', getcwd())
+#     return path.join(base_path, relative_path)
 
 
 def find_screen_size():
@@ -99,11 +96,11 @@ def selected_model(event):
         cache['model_name'] = select
         cache['model_path'] = models[select]
         model_png = cache['model_path'].split('.')[0] + '.png'
-        preview_filename = resource_path('reader/data/' + model_png)
+        preview_filename = 'reader/data/' + model_png
         set_thumbnail(preview_filename)
 
     else:
-        new_filename = filedialog.askopenfilename(initialdir=".", title="Browse files", filetypes=(("png files", "*.png"),("all files", "*.*")))
+        new_filename = tk.filedialog.askopenfilename(initialdir=".", title="Browse files", filetypes=(("png files", "*.png"),("all files", "*.*")))
 
         if new_filename == "":
             if cache['custom_flag'] == True:
@@ -130,7 +127,6 @@ def close():
 
 # define root
 root = tk.Tk()
-
 
 # format window
 root.title('iDmission FaceBot')
@@ -181,7 +177,7 @@ check = tk.Checkbutton(leftframe, variable=checkvar)
 check.grid(row=2, column=1, sticky='w')
 
 # preview box
-preview_path = resource_path('reader/data/' + cache['model_path'].split('.')[0] + '.png')
+preview_path = 'reader/data/' + cache['model_path'].split('.')[0] + '.png'
 preview_im = Image.open(preview_path)
 preview_im.thumbnail((200,200))
 preview = ImageTk.PhotoImage(preview_im)

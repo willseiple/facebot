@@ -1,6 +1,4 @@
-from cv2 import VideoCapture, namedWindow, destroyAllWindows, imshow, waitKey, resize, cvtColor, COLOR_BGR2GRAY
-import sys
-
+from cv2 import VideoCapture, namedWindow, destroyAllWindows, imshow, waitKey, resize
 
 # set binds and frame locations
 blink = (55, 20)
