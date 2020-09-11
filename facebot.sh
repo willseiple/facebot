@@ -12,6 +12,7 @@ then
     curl -sLb /tmp/cookie "https://drive.google.com/uc?export=download&confirm=${code}&id=${fileId}" -o ${fileName}
     printf 'Unzipping files...\n'
     unzip data.zip -d reader
+    rm data.zip
     printf 'Installation complete\n'
 fi
 
