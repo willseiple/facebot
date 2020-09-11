@@ -6,7 +6,7 @@ Requires Python 3, pip installer
 
 Clone repository and run the following scripts after navigating to its directory in terminal:
 
-`$ pip install -r requirements.txt`
+`$ pip install -r requirements.txt` ~166mb
 
 `$ chmod +x facebot.sh`
 
